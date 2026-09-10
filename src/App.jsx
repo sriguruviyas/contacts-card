@@ -14,28 +14,28 @@ const INITIAL_CONTACTS = [
   },
   {
     id: '2',
-    name: 'Ananya Sharma',
+    name: 'Ananya',
     company: 'UI/UX Designer at BharatTech',
     phone: '+91 98765 43210',
-    email: 'ananya.sharma@example.in',
+    email: 'ananya@example.in',
     bio: 'Designing intuitive, human-centered UI systems and delightful micro-interactions.',
     avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80'
   },
   {
     id: '3',
-    name: 'Rohan Verma',
+    name: 'Rohan',
     company: 'Cloud Engineer at Zoho Corp',
     phone: '+91 91234 56789',
-    email: 'rohan.verma@example.in',
+    email: 'rohan@example.in',
     bio: 'Building distributed cloud backends, high-throughput microservices, and serverless APIs.',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80'
   },
   {
     id: '4',
-    name: 'Kavya Nair',
+    name: 'Kavya',
     company: 'Full Stack Developer at Infosys',
     phone: '+91 94455 66778',
-    email: 'kavya.nair@example.in',
+    email: 'kavya@example.in',
     bio: 'Specializing in resilient full-stack systems, TypeScript, and reactive frontend patterns.',
     avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80'
   }
