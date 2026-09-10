@@ -44,15 +44,6 @@ const getGradientForName = (name = '') => {
 };
 
 export default function ContactCard({ contact, onDeleteContact }) {
-  const getInitials = (name) => {
-    if (!name) return '?';
-    const parts = name.trim().split(' ');
-    if (parts.length >= 2) {
-      return `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase();
-    }
-    return name.slice(0, 2).toUpperCase();
-  };
-
   const gradientBg = getGradientForName(contact.name);
 
   return (
@@ -60,31 +51,6 @@ export default function ContactCard({ contact, onDeleteContact }) {
       <div className="card-top-accent" style={{ background: gradientBg }}></div>
       
       <div className="card-header">
-        <div className="avatar-container">
-          {contact.avatar ? (
-            <img
-              src={contact.avatar}
-              alt={contact.name}
-              className="avatar-img"
-              onError={(e) => {
-                e.target.style.display = 'none';
-                if (e.target.nextSibling) {
-                  e.target.nextSibling.style.display = 'flex';
-                }
-              }}
-            />
-          ) : null}
-          <div
-            className="avatar-placeholder"
-            style={{
-              background: gradientBg,
-              display: contact.avatar ? 'none' : 'flex'
-            }}
-          >
-            {getInitials(contact.name)}
-          </div>
-        </div>
-
         <div className="header-info">
           <h3 className="contact-name">{contact.name}</h3>
           {contact.company && (

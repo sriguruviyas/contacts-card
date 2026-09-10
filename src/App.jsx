@@ -23,7 +23,6 @@ const INITIAL_CONTACTS = [
     phone: '+91 93456 56964',
     email: 'sriguruviyas@gmail.com',
     bio: 'Passionate web developer building clean web apps and thoughtful user experiences',
-    avatar: 'https://avatars.githubusercontent.com/u/249290000?v=4',
     github: 'https://github.com/sriguruviyas'
   },
   {
@@ -33,7 +32,6 @@ const INITIAL_CONTACTS = [
     phone: '+91 98765 43210',
     email: 'ananya@example.in',
     bio: 'Focused on creating thoughtful visual systems and making software feel effortless',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80',
     github: ''
   },
   {
@@ -43,7 +41,6 @@ const INITIAL_CONTACTS = [
     phone: '+91 91234 56789',
     email: 'rohan@example.in',
     bio: 'Specializes in scalable backend services and automating infrastructure',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
     github: ''
   },
   {
@@ -53,7 +50,6 @@ const INITIAL_CONTACTS = [
     phone: '+91 94455 66778',
     email: 'kavya@example.in',
     bio: 'Enjoys turning design concepts into fast accessible and responsive web experiences',
-    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
     github: ''
   }
 ];

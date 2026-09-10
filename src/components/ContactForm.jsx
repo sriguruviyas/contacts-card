@@ -16,7 +16,6 @@ export default function ContactForm({ onAddContact }) {
     phone: '',
     email: '',
     bio: '',
-    avatar: '',
     github: ''
   });
 
@@ -37,7 +36,6 @@ export default function ContactForm({ onAddContact }) {
       phone: '',
       email: '',
       bio: '',
-      avatar: '',
       github: ''
     });
   };
@@ -107,18 +105,6 @@ export default function ContactForm({ onAddContact }) {
           value={formData.github}
           onChange={handleChange}
           placeholder="https://github.com/sriguruviyas"
-        />
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="avatar">Photo Link (Optional)</label>
-        <input
-          type="url"
-          id="avatar"
-          name="avatar"
-          value={formData.avatar}
-          onChange={handleChange}
-          placeholder="https://avatars.githubusercontent.com/..."
         />
       </div>
 

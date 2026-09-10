@@ -13,7 +13,7 @@ This project provides a clean digital business card organizer designed with a mo
 ## Core Capabilities
 
 1. Dynamic Card Creation
-Add new contacts with their name, organization, phone number, email address, bio, and avatar link without reloading the page.
+Add new contacts with their name, organization, phone number, email address, and bio without reloading the page.
 
 2. Reusable Modular Architecture
 Built with separated components including ContactForm for collecting inputs, ContactCard for displaying individual cards, ContactList for responsive grid rendering, and App for state composition.
