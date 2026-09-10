@@ -34,7 +34,10 @@ export default function ContactForm({ onAddContact }) {
 
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
-      <h2>Add New Contact</h2>
+      <div className="form-header">
+        <span className="form-icon">✨</span>
+        <h2>Add New Contact</h2>
+      </div>
 
       <div className="form-group">
         <label htmlFor="name">Full Name *</label>
@@ -44,7 +47,7 @@ export default function ContactForm({ onAddContact }) {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          placeholder="e.g. Jane Doe"
+          placeholder="e.g. Sri Guru Viyas"
           required
         />
       </div>
@@ -57,7 +60,7 @@ export default function ContactForm({ onAddContact }) {
           name="company"
           value={formData.company}
           onChange={handleChange}
-          placeholder="e.g. Senior Developer at TechCorp"
+          placeholder="e.g. Web Developer at TechCorp"
         />
       </div>
 
@@ -69,7 +72,7 @@ export default function ContactForm({ onAddContact }) {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          placeholder="e.g. +1 (555) 000-1234"
+          placeholder="e.g. +91 93456 56964"
         />
       </div>
 
@@ -81,7 +84,7 @@ export default function ContactForm({ onAddContact }) {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="e.g. jane@example.com"
+          placeholder="e.g. sriguruviyas@gmail.com"
         />
       </div>
 
@@ -93,24 +96,24 @@ export default function ContactForm({ onAddContact }) {
           name="avatar"
           value={formData.avatar}
           onChange={handleChange}
-          placeholder="https://example.com/avatar.jpg"
+          placeholder="e.g. https://images.unsplash.com/..."
         />
       </div>
 
       <div className="form-group">
-        <label htmlFor="bio">Short Bio / Description</label>
+        <label htmlFor="bio">Short Bio / Tagline</label>
         <textarea
           id="bio"
           name="bio"
           rows="3"
           value={formData.bio}
           onChange={handleChange}
-          placeholder="A short note or background..."
+          placeholder="e.g. Crafting scalable, high-performance web experiences."
         ></textarea>
       </div>
 
       <button type="submit" className="submit-btn">
-        Add Contact Card
+        <span>+ Add Contact Card</span>
       </button>
     </form>
   );
