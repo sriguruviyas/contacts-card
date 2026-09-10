@@ -1,50 +1,52 @@
-# React Contact Cards Manager (SPA)
+# Contact Cards Manager
 
-A clean single-page application (SPA) built with React (functional components + hooks), ES6+ JavaScript, and modern CSS for adding, searching, and managing digital contact/business cards.
+A clean single page application built with React, ES6 JavaScript, and modern CSS for creating, viewing, and organizing digital contact cards.
 
-## 🚀 Features
+Repository: https://github.com/sriguruviyas/contacts-card
 
-- **Dynamic Contact Creation**: Input form component to collect Full Name, Job Title/Company, Phone, Email, Bio/Description, and optional Avatar URL. Submissions add contact cards dynamically to state without refreshing the page.
-- **Modular Component Architecture**:
-  - `ContactForm`: Controlled input handling and form submission.
-  - `ContactCard`: Reusable component displaying individual contact details with fallback avatar initials and direct communication links (`tel:`, `mailto:`).
-  - `ContactList`: Renders cards in a responsive CSS grid layout.
-  - `App`: Central component managing state, derived search filtering, and composition.
-- **Real-Time Search & Filtering**: Instant, case-insensitive partial match filtering on contact names and companies using derived state.
-- **Clean Styling**: Card shadows, rounded corners, responsive grid layout, and interactive hover elevation effects.
+Author: Sri Guru Viyas (https://github.com/sriguruviyas)
 
-## 📁 Project Structure
+## Project Overview
 
-```
-react-contact-cards/
-├── index.html                  # HTML entry point
-├── package.json                # Dependencies and scripts
-├── vite.config.js              # Vite configuration
-├── src/
-│   ├── main.jsx                # React DOM render entry
-│   ├── App.jsx                 # Main component managing state & composition
-│   ├── index.css               # Clean styling for cards & layout
-│   └── components/
-│       ├── ContactForm.jsx     # Form component (handles input + submit)
-│       ├── ContactCard.jsx     # Reusable card component
-│       └── ContactList.jsx     # Responsive grid parent component
-└── README.md
-```
+This project provides a clean digital business card organizer designed with a modular React architecture. Users can add new contacts through an interactive form and filter cards in realtime by name or company.
 
-## 💻 Getting Started Locally
+## Core Capabilities
 
-1. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+1. Dynamic Card Creation
+Add new contacts with their name, organization, phone number, email address, bio, and avatar link without reloading the page.
 
-2. **Run development server**:
-   ```bash
-   npm run dev
-   ```
-   Open `http://localhost:3000` in your browser.
+2. Reusable Modular Architecture
+Built with separated components including ContactForm for collecting inputs, ContactCard for displaying individual cards, ContactList for responsive grid rendering, and App for state composition.
 
-3. **Build for production**:
-   ```bash
-   npm run build
-   ```
+3. Realtime Search and Filter
+Type in the search field to filter the displayed cards in realtime through case insensitive matching on names and organizations.
+
+4. Thoughtful Design
+Card elevation shadows, rounded corners, responsive grid layout, SVG icons, and smooth hover transitions.
+
+## Project Structure
+
+src/main.jsx (Application root mount)
+
+src/App.jsx (Main application component with state management)
+
+src/index.css (Clean layout and card styling)
+
+src/components/ContactForm.jsx (Input form for collecting contact details)
+
+src/components/ContactCard.jsx (Individual card displaying user information)
+
+src/components/ContactList.jsx (Responsive grid displaying all active cards)
+
+## Running Locally
+
+1. Install dependencies:
+npm install
+
+2. Start the local development server:
+npm run dev
+
+Open http://localhost:3000 in your browser.
+
+3. Build production bundle:
+npm run build

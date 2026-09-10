@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
 
+const UserPlusIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+    <circle cx="8.5" cy="7" r="4"/>
+    <line x1="20" y1="8" x2="20" y2="14"/>
+    <line x1="23" y1="11" x2="17" y2="11"/>
+  </svg>
+);
+
 export default function ContactForm({ onAddContact }) {
   const [formData, setFormData] = useState({
     name: '',
@@ -7,7 +16,8 @@ export default function ContactForm({ onAddContact }) {
     phone: '',
     email: '',
     bio: '',
-    avatar: ''
+    avatar: '',
+    github: ''
   });
 
   const handleChange = (e) => {
@@ -21,21 +31,21 @@ export default function ContactForm({ onAddContact }) {
 
     onAddContact(formData);
 
-    // Reset form after submit
     setFormData({
       name: '',
       company: '',
       phone: '',
       email: '',
       bio: '',
-      avatar: ''
+      avatar: '',
+      github: ''
     });
   };
 
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
       <div className="form-header">
-        <span className="form-icon">✨</span>
+        <span className="form-icon"><UserPlusIcon /></span>
         <h2>Add New Contact</h2>
       </div>
 
@@ -47,20 +57,20 @@ export default function ContactForm({ onAddContact }) {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          placeholder="e.g. Sri Guru Viyas"
+          placeholder="Sri Guru Viyas"
           required
         />
       </div>
 
       <div className="form-group">
-        <label htmlFor="company">Job Title / Company</label>
+        <label htmlFor="company">Role and Organization</label>
         <input
           type="text"
           id="company"
           name="company"
           value={formData.company}
           onChange={handleChange}
-          placeholder="e.g. Web Developer at TechCorp"
+          placeholder="Web Developer at TechCorp"
         />
       </div>
 
@@ -72,7 +82,7 @@ export default function ContactForm({ onAddContact }) {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          placeholder="e.g. +91 93456 56964"
+          placeholder="+91 93456 56964"
         />
       </div>
 
@@ -84,36 +94,48 @@ export default function ContactForm({ onAddContact }) {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="e.g. sriguruviyas@gmail.com"
+          placeholder="sriguruviyas@gmail.com"
         />
       </div>
 
       <div className="form-group">
-        <label htmlFor="avatar">Avatar Image URL (Optional)</label>
+        <label htmlFor="github">GitHub Profile Link (Optional)</label>
+        <input
+          type="url"
+          id="github"
+          name="github"
+          value={formData.github}
+          onChange={handleChange}
+          placeholder="https://github.com/sriguruviyas"
+        />
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="avatar">Photo Link (Optional)</label>
         <input
           type="url"
           id="avatar"
           name="avatar"
           value={formData.avatar}
           onChange={handleChange}
-          placeholder="e.g. https://images.unsplash.com/..."
+          placeholder="https://avatars.githubusercontent.com/..."
         />
       </div>
 
       <div className="form-group">
-        <label htmlFor="bio">Short Bio / Tagline</label>
+        <label htmlFor="bio">About / Note</label>
         <textarea
           id="bio"
           name="bio"
           rows="3"
           value={formData.bio}
           onChange={handleChange}
-          placeholder="e.g. Crafting scalable, high-performance web experiences."
+          placeholder="Share a short note about this person"
         ></textarea>
       </div>
 
       <button type="submit" className="submit-btn">
-        <span>+ Add Contact Card</span>
+        Save Contact Card
       </button>
     </form>
   );
